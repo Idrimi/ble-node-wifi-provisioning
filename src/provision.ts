@@ -15,6 +15,7 @@ const errLog = (...args: unknown[]) => console.error('[Provision][ERROR]', ...ar
 class StatusChar extends bleno.Characteristic {
   private _value = Buffer.from('waiting');
   constructor() { super({ uuid: CHAR_STAT_UUID, properties: ['read'] }); }
+  // @ts-ignore
   onReadRequest(offset: number, callback: bleno.CharacteristicReadCallback) {
     callback(this.RESULT_SUCCESS, this._value.slice(offset));
   }
@@ -28,6 +29,7 @@ class WriteChar extends bleno.Characteristic {
   constructor(uuid: string, private key: keyof Creds) {
     super({ uuid, properties: ['write'] });
   }
+  // @ts-ignore
   onWriteRequest(data: Buffer, offset: number, withoutResponse: boolean, callback: bleno.CharacteristicWriteCallback) {
     try {
       const value = data.toString('utf8').trim();
