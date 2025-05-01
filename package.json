@@ -8,7 +8,7 @@
     "start": "node dist/provision.js"
   },
   "dependencies": {
-    "@abandonware/bleno": "^1.3.0"
+    "@abandonware/bleno": "^0.6.2"
   },
   "devDependencies": {
     "typescript": "^4.0.0",
