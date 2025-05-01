@@ -1,0 +1,17 @@
+{
+  "name": "ble-wifi-provision",
+  "version": "1.0.0",
+  "description": "BLE Wi-Fi Provisioning service in TypeScript",
+  "main": "dist/provision.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/provision.js"
+  },
+  "dependencies": {
+    "@abandonware/bleno": "^1.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "@types/node": "^16.0.0"
+  }
+}

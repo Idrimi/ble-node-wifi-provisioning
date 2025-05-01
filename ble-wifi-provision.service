@@ -1,13 +1,14 @@
 [Unit]
-Description=BLE Wi-Fi Provisioning Service
+Description=BLE Wi-Fi Provisioning Service (TypeScript)
 After=bluetooth.service network-online.target
 Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/node $REPO_DIR/provision.js
+WorkingDirectory=%h/ble-wifi-provision-ts
+ExecStart=/usr/bin/node %h/ble-wifi-provision-ts/dist/provision.js
 Restart=on-failure
 User=root
 
 [Install]
-WantedBy=multi-user-target
+WantedBy=multi-user.target
