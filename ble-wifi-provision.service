@@ -1,0 +1,13 @@
+[Unit]
+Description=BLE Wi-Fi Provisioning Service
+After=bluetooth.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node $REPO_DIR/provision.js
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user-target
