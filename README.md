@@ -1,5 +1,8 @@
 # BLE Wi-Fi Provisioning for Raspberry Pi Zero 2 W
 
+> **Everything that can be written in JavaScript, will be written in JavaScript.**
+> **Even though you can and maybe want to use this Repo, you shouldn't. User phython, C or go.**
+
 This repository provides a complete solution for provisioning Wi‑Fi credentials to a headless Raspberry Pi Zero 2 W over Bluetooth Low Energy (BLE) using Node.js (TypeScript) and NetworkManager.
 
 ## Overview
